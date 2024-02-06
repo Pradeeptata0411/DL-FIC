@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     CnnModel = mm.DeepANN()
     input_shape1=(28,28,3)
-    model3 = CnnModel.CNN_MODEL(input_shape=input_shape1)
+    model3 = CnnModel.CNN_MODEL()
     cnn = model3.fit(tr_gen, epochs=5, validation_data=va_gen)
     plt.figure(figsize=(12, 4))
 
@@ -28,11 +28,11 @@ if __name__ == "__main__":
     plt.legend()
 
     plt.subplot(1, 2, 2)
-    plt.plot(model3.history['loss'], label='Training Loss')
-    plt.plot(model3.history['val_loss'], label='Validation Loss')
-    plt.xlabel('Epochs')
-    plt.ylabel('Loss')
-    plt.title('CNN Model Training and Validation Loss')
-    plt.legend()
+    # plt.plot(model3.history['loss'], label='Training Loss')
+    # plt.plot(model3.history['val_loss'], label='Validation Loss')
+    # plt.xlabel('Epochs')
+    # plt.ylabel('Loss')
+    # plt.title('CNN Model Training and Validation Loss')
+    # plt.legend()
     plt.tight_layout()
     plt.show()

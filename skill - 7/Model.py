@@ -7,7 +7,6 @@ from tensorflow.keras import layers, models
 from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.optimizers import SGD
 
-
 class DeepANN():
 
     def CNN_MODEL(self):
