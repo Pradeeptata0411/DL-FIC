@@ -50,7 +50,7 @@ if __name__ == "__main__":
     print("-------------- After Image Agumentation -------------")
     print("-------------- After Image Agumentation -------------")
     print("-------------- After Image Agumentation -------------")
-    images_folder_path = 'E:\\KLU\\3rd year\\3_2\\deep learning\\Deep Learning Programs\\skill programs\\skill-8\\agumented images'
+    images_folder_path = '/skill programs/skill - 8\\agumented images'
     imdata = mp2.PreProcess_Data()
     imdata.visualization_images(images_folder_path, 2)
     train, label, df = imdata.preprocess(images_folder_path)
