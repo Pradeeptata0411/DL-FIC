@@ -12,7 +12,7 @@ import numpy as np
 
 class PreProcess_Data:
     def visualization_images(self, dir_path, nimages):
-        fig, axs = plt.subplots(2, 2, figsize=(10, 10))
+        fig, axs = plt.subplots(5, 5, figsize=(10, 10))
         dpath = dir_path
         count = 0
         for i in os.listdir(dpath):
@@ -36,7 +36,8 @@ class PreProcess_Data:
             for j in train_class:
                 img = os.path.join(dpath, i, j)
                 imagefile.append(img)
-                label.append(i)
+                #label.append(i)
+                label.append(1 if i == "Kirmizi_Pistachio" else 0)
         print('Number of train images: {}\n'.format(len(imagefile)))
         print('Number of train image labels: {}\n'.format(len(label)))
         ret_df = pd.DataFrame({'Image': imagefile, 'Labels': label})
