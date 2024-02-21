@@ -36,8 +36,8 @@ class PreProcess_Data:
             for j in train_class:
                 img = os.path.join(dpath, i, j)
                 imagefile.append(img)
-                #label.append(i)
-                label.append(1 if i == "Kirmizi_Pistachio" else 0)
+                label.append(i)
+                #label.append(1 if i == "Kirmizi_Pistachio" else 0)
         print('Number of train images: {}\n'.format(len(imagefile)))
         print('Number of train image labels: {}\n'.format(len(label)))
         ret_df = pd.DataFrame({'Image': imagefile, 'Labels': label})
